@@ -5,7 +5,7 @@ h1 {
     font-family: system-ui;
     text-align: center;
     font-style: normal;
-    text-decoration: underline;
+    text-decoration: none;
 } 
 
 h2 {
@@ -47,6 +47,18 @@ p {
     font-family: David;
     font-size: 0.8rem;
 }
+/* ------------------- */
+
+/* links formattink */
+a {
+    text-decoration: none;
+    color: hsl(0, 59%, 55%);
+}
+
+a:visited{
+    color: hsl(0, 59%, 40%)
+}
+/* ------------------- */
 
 /* images formatting */
 figure {
@@ -71,6 +83,7 @@ figure {
     width: 600px;   
     height: auto;  
 }
+/* ------------------- */
 
 /* Lists formatting */
 .index_ul {
@@ -84,5 +97,4 @@ figure {
 .index_ul li {
     display: inline;
 }
-
-
+/* ------------------- */
