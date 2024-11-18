@@ -74,10 +74,10 @@ a:visited{
 /* images formatting */
 figure {
     display: inline-block; /* Keeps the figure inline */
-    margin: 5px;             
+    margin: 5px;            
+    padding: 5px; 
     text-align: center;    /* Centers the caption below the image */
     border: 2px solid brown
-   
 }
 
 .img-preview {
