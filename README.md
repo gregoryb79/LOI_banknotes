@@ -1,1 +1,1 @@
-"# LOI_banknotes" 
+"# Land of Israel Banknotes" 
