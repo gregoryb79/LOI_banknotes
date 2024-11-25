@@ -4,53 +4,42 @@
 }
 
 /* Text formatting */
-h1 {
-    font-size: calc(2*var(--basic_text_size) + var(--basic_vw_factor));
-    /* font-size:  */
+@mixin header-style($style){
     font-family: system-ui;
     text-align: center;
-    font-style: normal;
+    font-style: $style;
     text-decoration: none;
+   }
+
+h1 {
+    @include header-style(normal);
+    font-size: calc(2*var(--basic_text_size) + var(--basic_vw_factor));
 } 
 
 h2 {
+    @include header-style(normal);
     font-size: calc(1.5*var(--basic_text_size) + 0.8*var(--basic_vw_factor)); 
-    font-family: system-ui;
-    text-align: center;
-    font-style: normal;
-    text-decoration: none;
 } 
 
 h3 {
     font-size: calc(1.5*var(--basic_text_size) + 0.8*var(--basic_vw_factor)); 
-    font-family: system-ui; 
-    font-family: system-ui;
-    text-align: center;
-    font-style: normal;
-    text-decoration: none;
+    @include header-style(normal);
     margin-bottom: 4px;
     margin-top: 0px;
     color: white;
-    // background-color: hsl(0, 0%, 30%);
-    background-color: green;
+    background-color: hsl(0, 0%, 30%);
 } 
 
 h4 {
     font-size: calc(0.7*var(--basic_text_size) + 0.4*var(--basic_vw_factor));
-    font-family: system-ui;
-    text-align: center;
-    font-style: italic;
-    text-decoration: none;
+    @include header-style(italic);
     margin-top: 10px;
     margin-bottom: 10px;
 } 
 
 h5 {
     font-size: calc(0.7*var(--basic_text_size) + 0.4*var(--basic_vw_factor)); 
-    font-family: system-ui;
-    text-align: center;
-    font-style: italic;
-    text-decoration: none;
+    @include header-style(italic);
     margin-top: 0px;
     margin-bottom: 10px;
 } 
@@ -92,11 +81,11 @@ p {
 /* links formatting */
 a {
     text-decoration: none;
-    color: hsl(0, 59%, 55%);
-}
+    color: hsl(0, 59%, 55%);   
 
-a:visited{
-    color: hsl(0, 59%, 40%)
+    &:visited{
+        color: hsl(0, 59%, 30%)        
+    }
 }
 /* ------------------- */
 
@@ -106,7 +95,7 @@ figure {
     margin: 5px;            
     padding: 5px; 
     text-align: center;    /* Centers the caption below the image */
-    border: 2px solid brown
+    border: 2px solid hsl(0, 59%, 41%)
 }
 
 .img-preview {
@@ -115,28 +104,24 @@ figure {
     height: auto;
     width: auto;
     cursor: pointer;
-}
 
-.img-preview:hover {
-    transform: scale(1.1);
+    &:hover {
+        transform: scale(1.1);
+    }
 }
   
 .img-full {
     width: 600px;   
     height: auto;  
     cursor: zoom-in;
-}
 
-.img-full:hover{
-    /* transform: scale(3);
-    transform-origin: center center;
-    max-width: 100%; */
-    max-width: 100%;
-    transition: transform 0.3s ease, transform-origin 0.3s ease;
-    transform-origin: 50% 50%;
-    transform: scale(2);
+    &:hover{
+        max-width: 100%;
+        transition: transform 0.3s ease, transform-origin 0.3s ease;
+        transform-origin: 50% 50%;
+        transform: scale(2);
+    }
 }
-
 /* ------------------- */
 
 /* Lists formatting */
@@ -146,29 +131,28 @@ figure {
     list-style-type: none;
     margin-top: 0;
     margin-bottom: 0;
-}
 
-.index_ul li {
-    display: inline;
+    li {
+        display: inline;
+    }
 }
 
 .show_ul{
     font-size: var(--basic_text_size); 
     font-family: system-ui;
     list-style-type: none;
-}
 
-.show_ul li {
-    /* display: inline; */
-    margin-top: 010px;
-    margin-bottom: 010px;
+    li {
+        /* display: inline; */
+        margin-top: 010px;
+        margin-bottom: 010px;
+    }
 }
 /* ------------------- */
 
 /* Header formating */
 header {
-    // background-color: hsl(0, 0%, 30%);
-    background-color: green;
+    background-color: hsl(0, 0%, 30%);
     color: white;
     padding: 1px;
     text-align: center;
