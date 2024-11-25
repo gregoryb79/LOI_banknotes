@@ -116,10 +116,8 @@ figure {
     cursor: zoom-in;
 
     &:hover{
-        max-width: 100%;
         transition: transform 0.3s ease, transform-origin 0.3s ease;
-        transform-origin: 50% 50%;
-        transform: scale(2);
+        transform: scale(1.25);
     }
 }
 /* ------------------- */
